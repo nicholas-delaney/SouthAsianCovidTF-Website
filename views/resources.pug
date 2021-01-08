@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  if formSuccess
+    div(class='successMsg')
+      h1 Thank you!
+      h3 Your Workplace Concern has been sent and we will be in contact with you!
+  div(class='resources')
+    h1=title
+    div(class='wpcForm')
+      h1 Worplace Concern Form
+      p This information will be used to share with public health officials to help make your workplace safer. If you choose to leave your information, we will contact you to get more information.
+      p Required fields are labelled with "Required"
+      if errors
+        ul
+          for error in errors
+            li!= error.msg
+      form(action='' method='post')
+        div(class='wpcFormRequired')
+          div(class='requiredField')
+            label(for='workplaceName') Name of Workplace:
+            input(type='text' id='workplaceName' name='workplaceName' required='true' value=(undefined===workplaceName ? '' : workplaceName))
+            span
+          div(class='requiredField')
+            label(for='workplaceAddress') Workplace Address:
+            input(type='text' id='workplaceAddress' name='workplaceAddress' required='true' value=(undefined===workplaceAddress ? '' : workplaceAddress))
+            span
+          div(class='requiredField')
+            label(for='issues') Issue(s) Observed
+            textarea(id='issues' name='issues' required='true' value=(undefined===issues ? '' : issues))
+            span
+        div(class='wpcFormOptional')
+          h3 Your Contact Information (Optional)
+          p If you would like to be contacted regarding your workplace concern, please leave either your phone, email or another way we can contact you. These fields are completely optional.
+          label(for='contactEmail') Your Email:
+          input(type='email' id='contactEmail' name='contactEmail' value=(undefined===contactEmail ? '' : contactEmail))
+          label(for='contactPhone') Your Phone Number:
+          input(type='tel' id='contactPhone' name='contactPhone' value=(undefined===contactPhone ? '' : contactPhone))
+          label(for='contactOther') Other Contact Method:
+          input(type='text' id='contactOther' name='contactOther' value=(undefined===contactOther ? '' : contactOther))
+          div(class='buttonS')
+            button(type='submit') Send E-mail

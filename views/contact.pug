@@ -1,0 +1,80 @@
+extends layout
+
+block content  
+  if formSuccess
+    div(class='successMsg')
+      h1 Thank you!
+      h3 Your volunteer request has been sent and we will be in contact with you!
+  div(class='contactContent')
+    div(class='contentSidepiece')
+      div(class='contactInfo')
+        h1 E-mail
+        ul
+          li General Email: info@southasiancovid.ca
+          li Media Email: mediarelations@southasiancovid.ca
+          li BC Email: bc@southasiancovid.ca    
+      div(class='contactSocialMedia')
+        h1 Social Media
+        ul 
+          a(href='https://www.twitter.com/')          
+            li 
+              i(class='fa fa-twitter') 
+                span(class='smLink') &nbsp;&nbsp; South Asian Covid TF Twitter
+          a(href='https://www.instagram.com/')
+            li 
+              i(class='fa fa-instagram') 
+                span(class='smLink') &nbsp;&nbsp; South Asian Covid TF Instagram
+          a(href='https://www.instagram.com/')
+            li 
+              i(class='fa fa-instagram') 
+                span(class='smLink') &nbsp;&nbsp; Other Instagram          
+          a(href='https://www.facebook.com/')
+            li 
+              i(class='fa fa-facebook') 
+                span(class='smLink') &nbsp;&nbsp;&nbsp; South Asian Covid TF Facebook
+          a(href='https://www.facebook.com/')
+            li
+              i(class='fa fa-facebook') 
+                span(class='smLink') &nbsp;&nbsp;&nbsp; Other Facebook
+    div(class='joinUsForm')
+      if errors
+        h1(class='errorHeader') Please fix the following errors:
+        ul
+          for error in errors
+            li!= error.msg
+      h1(class='juCenter') Join us!
+      h3(class='juCenter') We are looking for volunteers with backgrounds in:
+      ul
+        li Social media content development
+        li Web assistance
+        li Public health campaigns
+        li Law
+        li Social determinants
+        li Epedimiology
+      p Required fields are labelled with "Required"
+      form(action='' method='post')
+        div(class='formStyle')
+          div(class='requiredField')
+            label(for='name') Name:
+            input(type='text' placeHolder='Your name' id='name' name='name' required='true' value=(undefined===name ? '' : name))
+            span
+          div(class='requiredField')
+            label(for='email') E-mail:
+            input(type='email' placeHolder='Your E-mail' id='email' name='email' required='true' value=(undefined===email ? '' : email))
+            span
+          label(for='phone') Phone number:        
+          input(type='tel' placeHolder='Your phone number' id='text' name='phone' value=(undefined===phone ? '' : phone))
+          div(class='requiredField')
+            label(for='howHelp') How you can help:         
+            textarea(placeHolder='Tell us how you can help' id='howHelp' name='howHelp' required='true' value=(undefined===howHelp ? '' : howHelp))
+            span
+          label(for='relevantXP') Do you have any relevant experience?
+          textarea(id='relevantXP' placeHolder='i.e. project managment, social media, lobbying, etc.' name='relevantXP' value=(undefined===relaventXP ? '' : relevantXP))
+          label(for='other') Anything else you would like to add?
+          textarea(id='other' name='other' value=(undefined===other ? '' : other))
+          div(class='buttonS')
+            button(type='submit') Send E-mail
+      if errors
+        ul
+          for error in errors
+            li!= error.msg

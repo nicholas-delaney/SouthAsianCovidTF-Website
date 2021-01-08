@@ -1,0 +1,628 @@
+:root {
+  --background: rgb(0, 0, 0);
+  --navBackground: rgba(0, 0, 0, 0.85);
+  --niceWhite: #DDD;
+  --white: #EEE;
+  --black: #111;
+  --hardRed: red;
+  --softRed: #ad0c0c; /*#ad0c0c;/*#960c0c*/
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 1%;
+  color: var(--softRed);
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  
+}
+
+/* Homepage style */
+.homepageContent {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.bigLogo {
+  margin: 0;
+  margin-top: 5%;
+  padding: 0;
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.mainLogo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.welcomeMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 0;
+  padding: 5%;
+}
+
+/* About Style */
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 5% 5%;
+}
+
+.aboutMsg {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.aboutTeam {
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer style */
+.footer {
+  color: black;
+  background-color: #CCC;
+  border-top: 1px solid black;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: flex-start;
+  text-align: left;
+  font-size: 14px;
+}
+
+.socialMedia {
+  margin: 1% 5% 1% 5%;
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 3%;
+}
+
+.footerContact {
+  padding-bottom: 2%;
+  margin: 1% 5% 1% 5%;
+  border-bottom: 1px solid var(--black);
+}
+
+.footerNav {
+  margin: 1% 5% 1% 5%;
+  padding-top: 1%;
+}
+
+.footer ul {
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+}
+
+.footer h3 {
+  margin-top: 0.1rem;
+  text-align: center;
+}
+
+.socialMedia i {
+  margin: 0;
+  text-align: left;
+}
+
+.socialMedia i:hover {
+  color: var(--softRed);
+}
+
+.footerNav a, .socialMedia a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-nav li {
+  flex: 1 1 33%;
+  padding: 7px;
+}
+
+.footerNav a:hover {
+  color: var(--softRed);
+}
+
+.smLink {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Resources styles */
+.resources {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2% 15% 10% 15%;
+}
+
+.wpcForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border: 1px solid var(--softRed);
+  border-radius: 7px;
+  background-color: #DDD;
+  padding: 2%;
+}
+
+.wpcForm p {
+  margin: 0;
+  padding-bottom: 1%;
+}
+
+.wpcMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.wpcFormRequired {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.wpcFormOptional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.teamLayout {
+  margin-bottom: 2%;
+}
+
+.teamLayout img {
+  margin: 0;
+  margin-top: 5%;
+  padding: 0;
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+
+.aboutContent h1 {
+  padding-top: 2%;
+}
+
+/* Contact styles */
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5% 3% 3% 2%;
+}
+
+.contactInfo, .contactSocialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--softRed);
+  background-color: #DDD;
+  border-radius: 7px;
+  padding: 2%;
+  margin-bottom: 5%;
+
+}
+
+.contactContent h1 h3 {
+  margin-left: 15px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.juCenter {
+  text-align: center;
+}
+
+.joinUsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--softRed);
+  background-color: #DDD;
+  border-radius: 7px;
+  padding: 3%;
+  margin-bottom: 5%;
+}
+
+.joinUsForm ul {
+  width: 100%;
+}
+
+.formStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.formStyle input,
+.formStyle textarea,
+.wpcFormOptional input,
+.wpcFormRequired textarea,
+.wpcFormRequired input {
+  width: 90%;
+  height: 80%;
+  padding: 10px 5px 10px 5px;
+  border-radius: 7px;
+  border: 1px solid black;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.formStyle button, .wpcFormOptional button {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 50%;
+  padding: 10px 5px 10px 5px;
+  color: white;
+  background-color: var(--softRed);
+  border: 1px solid black;
+  border-radius: 7px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+}
+
+.formStyle button:hover, .wpcFormOptional button:hover {
+  color: black;
+  background-color: var(--softRed);
+  cursor: pointer;
+}
+
+.formStyle label, .wpcFormOptional label, .wpcFormRequired label {
+  line-height: 2.5em;
+  width: 100%;
+}
+
+.buttonS {
+  display: flex;
+  justify-content: center;
+}
+
+.contactSocialMedia {
+  display: none;
+}
+
+.requiredField {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+input + span, textarea + span {
+  position: relative;
+}
+
+textarea:required + span::after, input:required + span::after {
+  font-size: 12px;
+  position: absolute;
+  content: "Required";
+  color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+.errorHeader {
+  color: red;
+}
+
+.successMsg {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid green;
+  background-color: #DDD;
+  border-radius: 7px;
+  padding: 3%;
+  margin: 2% 15%;
+}
+
+.successMsg h1, .successMsg h3 {
+  color: green;
+  text-align: center;
+}
+
+/* Navigation styles */
+header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background: var(--navBackground);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+}
+
+.logo {
+  color: var(--softRed);
+  margin: 0;
+  padding: 12px;
+  font-size: 1.5rem;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 1000;
+  display: none;
+}
+
+.smlLogo {
+  color: var(--white);
+  margin: 0;
+  padding: 12px;
+  font-size: 1.3rem;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: flex-start;
+  top: 100%;
+  left: 0;
+  background: var(--navBackground);
+  transform: scale(1, 0);
+  width: 100%;
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  width: 100%;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: #DDD;
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+header a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--softRed);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0.5em;
+  height: 100%;
+  font-size: 2em;
+}
+
+.nav-toggle-label {
+  font-size: 2em;
+  color: var(--white);
+}
+
+.nav-toggle-label:hover {
+  color: red;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 850px) {
+  /* home page style */
+  .bigLogo {
+    width: 30%;
+    margin-top: 2%;
+  }
+
+  .homepageSubContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 2% 5% 5% 5%;
+
+  }
+
+  .welcomeMsg {
+    flex: 1 1 70%;
+    padding: 0 5% 0 5%;
+  }
+
+  .welcomMsg h1 {
+    color: red;
+  }
+
+  .smlLogo {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+
+  /* navigation bar style */
+  .nav-toggle-label {
+    display: none;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  header {
+    all: unset;
+    margin: 0;
+    background: var(--navBackground);
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    opacity: 1;
+  }
+
+  .logo {
+    padding-left: 2rem;
+    font-size: 22px;
+  }
+
+  nav li {
+    all: unset;
+    margin-right: 2.5rem;
+  }
+
+  /* footer style */
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .socialMedia, .footerContact, .footerNav {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .footer-nav li {
+    padding: 1px;
+  }
+
+  /* About style */
+  .aboutContent {
+    padding-top: 0;
+    margin: 0 10% 2% 10%;
+  }
+
+  /* Contact Style */
+  .contactSocialMedia {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding: 0;
+  }
+
+  .contactSocialMedia ul {
+    padding-right: 10%;
+  }
+
+  .contactSidepiece {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+    padding: 0;
+  }
+
+  .contactSocialMedia a {
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    color: black;
+  }
+
+  .contactSocialMedia a:hover {
+    color: var(--softRed);
+  }
+
+  .joinUsForm {
+    flex: 1 1 60%;
+    margin-left: 5%;
+  }
+
+  .contactContent {
+    margin: 3% 10% 2% 10%;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  /* Resource page style */
+  .teamLayout {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .teamMember {
+    flex: 0 0 33%;
+    padding: 2%;
+  }
+}

@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name="twitter:widgets:csp" content="on")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet")
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet")
+  header   
+    input(type='checkbox' id='nav-toggle' class='nav-toggle')
+    a(href='/home')
+      h1(class='logo') south asian covid task force
+      h1(class='smlLogo') Menu
+    nav
+      ul(class='navbar-nav')
+        li
+          a(href='/home') Home
+        li
+          a(href='/about') About
+        li
+          a(href='/contact') Contact
+        li
+          a(href='/media') Media
+        li
+          a(href='/resources') Resources
+        li
+          a(href='/bc') BC Task Force
+    label(for='nav-toggle' class='nav-toggle-label')
+      i(class='fa fa-bars')
+  body
+    div(class='mainLogo')
+      img(class='bigLogo' src='../images/sactfLogo.jpg' alt='South Asian Task Force logo')
+    block content
+  footer 
+    div(class='footer')
+      div(class='socialMedia')
+        h3 Social Media
+        ul 
+          a(href='https://www.twitter.com/')          
+            li 
+              i(class='fa fa-twitter') 
+                span(class='smLink') &nbsp;&nbsp; South Asian Covid TF Twitter
+          a(href='https://www.instagram.com/')
+            li 
+              i(class='fa fa-instagram') 
+                span(class='smLink') &nbsp;&nbsp; South Asian Covid TF Instagram
+          a(href='https://www.instagram.com/')
+            li 
+              i(class='fa fa-instagram') 
+                span(class='smLink') &nbsp;&nbsp; Other Instagram          
+          a(href='https://www.facebook.com/')
+            li 
+              i(class='fa fa-facebook') 
+                span(class='smLink') &nbsp;&nbsp;&nbsp; South Asian Covid TF Facebook
+          a(href='https://www.facebook.com/')
+            li
+              i(class='fa fa-facebook') 
+                span(class='smLink') &nbsp;&nbsp;&nbsp; Other Facebook
+      div(class='footerContact') 
+        h3 Contact
+        ul 
+          li General: &nbsp;info@southasiancovid.ca
+          li &nbsp;&nbsp;&nbsp;Media: &nbsp;mediarelations@southasiancovid.ca
+          li &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BC: &nbsp;bc@southasiancovid.ca
+      div(class='footerNav')
+        ul(class='footer-nav')
+          li
+            a(href='/home') Home
+          li
+            a(href='/about') About
+          li
+            a(href='/contact') Contact
+          li
+            a(href='/media') Media
+          li
+            a(href='/resources') Resources
+          li
+            a(href='/bc') BC Task Force
+
+
