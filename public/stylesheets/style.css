@@ -41,23 +41,20 @@ body {
   background-color: var(--white);
 }
 
-.bigLogo {
-  margin: 0;
-  margin-top: 5%;
-  padding: 0;
-  width: 70%;
-  height: auto;
-  object-fit: cover;
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-top: 5%;
 }
 
 .mainLogo {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   background-color: black;
-  margin: 0;
-  padding: 0;
+  background-image: url('../images/sactfLogo.jpg');
   width: 100%;
+  height: 300px;
+  background-size: cover; 
+  background-position: center;
 }
 
 .welcomeMsg {
@@ -472,9 +469,8 @@ nav a:hover {
 
 @media screen and (min-width: 850px) {
   /* home page style */
-  .bigLogo {
-    width: 30%;
-    margin-top: 2%;
+  .mainLogo {
+    width: 50%;
   }
 
   .homepageSubContent {
