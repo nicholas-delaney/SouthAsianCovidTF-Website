@@ -4,9 +4,222 @@ block content
   if formSuccess
     div(class='successMsg')
       h1 Thank you!
-      h3 Your Workplace Concern has been sent and we will be in contact with you!    
+      h3 Your Workplace Concern has been sent and we will be in contact with you!   
+  div(class='resourcesNav')
+    span(class='ToggleRNav')
+    h4 Resources Navigation
+    ul
+      a(href='#rLanguage') 
+        li Resources by Language
+      a(href='#rProvince') 
+        li Resources by Province
+      a(href='#mHealth') 
+        li Mental Health
+      a(href='#finSupport') 
+        li Financial Support
+      a(href='#fooSupport') 
+        li Food Support
+      a(href='#wConcern') 
+        li(class='lastLi') Worplace Concern 
   div(class='resources')
-    div(class='wpcForm')
+    div(class='resourcesByLanguage' id='rLanguage')
+      h1 Resources By Language
+    div(class='resourcesByProvince' id='rProvince')
+      h1 Resources By Province
+      h2 Alberta
+      div(class='provincialResources')
+        a(href='https://open.alberta.ca/dataset/2be831dd-d83e-42da-b634-6bc6d5232d1a/resource/18f05bae-e343-4332-8d41-4229e298efef/download/covid-19-relaunch-guidance-places-of-worship-2020-0609.pdf')
+          p Alberta places of worship guidelines
+        a(href='https://www.albertahealthservices.ca/zones/calgary-zone.aspx')
+          p Calgary Zone - Alberta Health Services
+        a(href='https://www.alberta.ca/coronavirus-info-for-albertans.aspx')
+          p Alberta COVID-19 page
+        a(href='https://www.alberta.ca/alberta-relaunch-strategy.aspx')
+          p Alberta's reopening framework
+        a(href='https://albertahealthservices.ca/topics/page16944.aspx')
+          p Alberta Health Services COVID-19 page
+        a(href='https://www.alberta.ca/health.aspx')
+          p Alberta Health Resources
+      h2 British Columbia
+      div(class='provincialResources')
+        a(href='https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support')
+          p British Columbia COVID-19 page
+          p British Columbia COVID-19 page
+        a(href='http://www.vch.ca/public-health')
+          p Vancouver Coastal Health
+        a(href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/data')
+          p BC Centre for Disease Control's COVID-19 page
+        a(href='https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support/bc-restart-plan')
+          p British Columbia's reopening framework
+        a(href='https://www.fraserhealth.ca/')
+          p Fraser Health
+        a(href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/testing/testing-information')
+          p Testing Information
+        a(href='https://www.surrey.ca/engagement/coronavirus-covid-19-information')
+          p Surrey
+        a(href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/about-covid-19/translated-content?utm_campaign=20200327_GCPE_AM_COVID_1_LEARN_FBIG_BCGOV_PU_BC__STATIC')
+          p COVID FAQ in Punjabi
+      h2 Manitoba
+      div(class='provincialResources')
+        a(href='https://www.manitoba.ca/asset_library/en/covid/restoring_faith_based_gatherings.pdf')
+          p Manitoba places of worship guidelines
+        a(href='https://wrha.mb.ca/public-health/')
+          p Winnipeg Regional Health Authority
+        a(href='https://www.gov.mb.ca/covid19/index.html')
+          p Manitoba COVID-19 page
+        a(href='https://www.gov.mb.ca/covid19/restoring/index.html')
+          p Manitoba's reopening framework
+        a(href='https://sharedhealthmb.ca/covid19/')
+          p Shared Health's COVID-19 page
+        a(href='https://www.gov.mb.ca/health/publichealth/index.html')
+          p Manitoba Health Resources
+      h2 New Brunswick
+      div(class='provincialResources')
+        a(href='https://www2.gnb.ca/content/dam/gnb/Departments/h-s/pdf/faq_religious_services-e.pdf')
+          p New Brunswick places of worship guidelines
+        a(href='https://www.moncton.ca/covid-19')
+          p Moncton COVID-19 page
+        a(href='https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html')
+          p New Brunswick COVID-19 page
+        a(href='https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/recovery.html')
+          p New Brunswick's reopening framework
+        a(href='https://en.horizonnb.ca/home/patients-and-visitors/coronavirus-(covid-19).aspx')
+          p Horizon Health Network's COVID-19 page
+        a(href='https://www2.gnb.ca/content/gnb/en/departments/health.html')
+          p New Brunswick Health Resources
+      h2 Newfoundland and Labrador
+      div(class='provincialResources')
+        a(href='https://www.gov.nl.ca/covid-19/information-sheets-for-businesses-and-workplaces/faith-based-organizations/')
+          p Newfoundland and Labrador places of worship guidelines
+        a(href='https://en.horizonnb.ca/facilities-and-services/facilities/saint-john-public-health.aspx')
+          p Saint John Public Health - Horizon Health Network
+        a(href='https://www.gov.nl.ca/covid-19/')
+          p Newfoundland and Labrador COVID-19 page
+        a(href='https://www.gov.nl.ca/covid-19/alert-system/')
+          p Newfoundland and Labrador's reopening framework
+        a(href='https://www.gov.nl.ca/covid-19/alert-system/public-health-orders/')
+          p Newfoundland and Labrador Public Health COVID-19 page
+        a(href='https://www.gov.nl.ca/hcs/')
+          p Newfoundland and Labrador Health Resources
+      h2 Northwest Territories
+      div(class='provincialResources')
+        a(href='https://www.gov.nt.ca/covid-19/en/services/reopening-nwt-phases')
+          p Northwest Territories places of worship guidelines
+        a(href='https://www.nthssa.ca/en/public-health-services-yellowknife-region')
+          p Yellowknife Public Health - Health and Social Services
+        a(href='https://www.gov.nt.ca/covid-19/')
+          p Northwest Territories COVID-19 page
+        a(href='https://www.gov.nt.ca/covid-19/en/services/public-health-orders/emerging-wisely')
+          p Northwest Territories' reopening framework
+        a(href='https://www.nthssa.ca/en/services/coronavirus-disease-covid-19-updates')
+          p NT Health and Social Services Authority's COVID-19 page
+        a(href='https://www.hss.gov.nt.ca/en/resources')
+          p Northwest Territories Health Resources
+      h2 Nova Scotia
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+      h2 Nunavut
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+      h2 Ontario
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+      h2 Prince Edward Island
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+      h2 Quebec
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+      h2 Saskatchewan
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+      h2 Yukon
+      div(class='provincialResources')
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+        a(href='')
+          p 
+    div(class='mentalHealth' id='mHealth')
+      h1 Mental Health
+    div(class='financialSupport' id='finSupport')
+      h1 Financial Support
+    div(class='foodSupport' id='fooSupport')
+      h1 Food Support
+    div(class='wpcForm' id='wConcern')
       h1 Worplace Concern Form
       p This information will be used to share with public health officials to help make your workplace safer. If you choose to leave your information, we will contact you to get more information.
       p Required fields are labelled with "Required"
