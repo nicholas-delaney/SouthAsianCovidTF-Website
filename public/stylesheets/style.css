@@ -176,33 +176,61 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2% 15% 10% 15%;
+  margin: 2% 1% 10% 1%;
+}
+
+.resourcesNav {
+  display: none;
 }
 
 .resources h1 {
   margin-top: 6%;
+  margin-left: 4%;
+  color: black;
+  font-size: 3.0rem;
+}
+
+.resources h3 {
+  margin-left: 4%;
 }
 
 .resources h2 {
   color: var(--black);
+  text-align: left;
 }
 
-.resourcesByLanguage {
+.resourcesByLanguage, .resourcesByProvince, .mentalHealth, .financialSupport, .foodSupport {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 6%;
 }
 
-.resourcesByProvince {
+.resourceSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex: 100%;
 }
 
-.mentalHealth {
+.resourceSection a {
+  text-decoration: none;
+  color: var(--niceWhite);
+  margin: 1% 0;
+  padding: 0;
+  width: 100%;
 }
 
-.financialSupport {
+.resourceSection p {
+  background: var(--softRed);
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 1%;
+  margin: 0;
+  text-align: center;
 }
-
-.foodSupport {
-}
-
-
 
 .wpcForm {
   display: flex;
@@ -212,6 +240,7 @@ body {
   border-radius: 7px;
   background-color: #DDD;
   padding: 2%;
+  margin-top: 6%;
 }
 
 .wpcForm p {
@@ -255,6 +284,81 @@ body {
 
 .aboutContent h1 {
   padding-top: 2%;
+}
+
+.dResource {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  
+}
+
+.dResource a {
+  text-decoration: none;
+  background-color: #DDD;
+  flex: 0 1 12%;
+  padding: 7px;
+  margin: 2% 5px;
+  text-align: center;
+  color: black;
+  border: 1px solid var(--softRed);
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.dResource a:hover {
+  color: var(--softRed);
+
+}
+
+/* Downloadable-resources styles */
+.dResourcesBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1% 1%;
+}
+
+.dResourcesBody h3 {
+  color: black;
+}
+
+.downloadableContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 100%;
+}
+
+.singleResource {
+  margin: 5% 0;
+}
+
+.singleResource img {
+  margin: 1% 0;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  width: 100%;
+  height: auto;
+}
+
+.singleResource form {
+  display: flex;
+  justify-content: center;
+}
+
+.dButton {
+  width: 50%;
+  padding: 2% 0;
+  border: 1px solid var(--softRed);
+  border-radius: 7px;
+  background-color: #DDD;
+  color: black;
+}
+
+.dButton:hover {
+  cursor: pointer;
+  color: var(--softRed);
+  box-shadow: 5px 5px 5px #aaaaaa;
 }
 
 /* Contact styles */
@@ -719,7 +823,33 @@ nav a:hover {
   }
 
   .resources {
-    margin-left: 210px;
+    margin: 5% 210px;
+  }
+
+  .resourceSection {
+    flex-flow: row wrap;
+  }
+
+  .resourceSection a {
+    flex: 0 0 45%;
+    margin: 1%;
+  }
+
+  .resourceSection p:hover {
+    background-color: black;
+  }
+
+  /* Downloadable-resources style */
+  .singleResource {
+    margin: 2% 2%;
+    flex: 0 0 27%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .downloadableContent {
+    flex-flow: row wrap;
+    align-items: flex-end;
   }
 
 }

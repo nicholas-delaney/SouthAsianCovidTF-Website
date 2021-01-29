@@ -7,12 +7,12 @@ block content
       h3 Your Workplace Concern has been sent and we will be in contact with you!   
   div(class='resourcesNav')
     span(class='ToggleRNav')
-    h4 Resources Navigation
+    h4 Resource Navigation
     ul
       a(href='#rLanguage') 
         li Resources by Language
       a(href='#rProvince') 
-        li Resources by Province
+        li COVID-19 In Canada
       a(href='#mHealth') 
         li Mental Health
       a(href='#finSupport') 
@@ -24,10 +24,19 @@ block content
   div(class='resources')
     div(class='resourcesByLanguage' id='rLanguage')
       h1 Resources By Language
+      h3 Choose a language to view the corresponding resources available for download
+      div(class='dResource')
+        a(href='/downloadable-resources/Bengali') Bengali
+        a(href='/downloadable-resources/Punjabi') Punjabi
+        a(href='/downloadable-resources/Gujarati') Gujarati
+        a(href='/downloadable-resources/English') English
+        a(href='/downloadable-resources/Tamil') Tamil
+        a(href='/downloadable-resources/Hindi') Hindi
     div(class='resourcesByProvince' id='rProvince')
-      h1 Resources By Province
+      h1 COVID-19 In Canada
+      h3 Guidelines and Resources By Province or Territory
       h2 Alberta
-      div(class='provincialResources')
+      div(class='resourceSection')
         a(href='https://open.alberta.ca/dataset/2be831dd-d83e-42da-b634-6bc6d5232d1a/resource/18f05bae-e343-4332-8d41-4229e298efef/download/covid-19-relaunch-guidance-places-of-worship-2020-0609.pdf')
           p Alberta places of worship guidelines
         a(href='https://www.albertahealthservices.ca/zones/calgary-zone.aspx')
@@ -41,9 +50,8 @@ block content
         a(href='https://www.alberta.ca/health.aspx')
           p Alberta Health Resources
       h2 British Columbia
-      div(class='provincialResources')
+      div(class='resourceSection')
         a(href='https://www2.gov.bc.ca/gov/content/safety/emergency-preparedness-response-recovery/covid-19-provincial-support')
-          p British Columbia COVID-19 page
           p British Columbia COVID-19 page
         a(href='http://www.vch.ca/public-health')
           p Vancouver Coastal Health
@@ -60,7 +68,7 @@ block content
         a(href='http://www.bccdc.ca/health-info/diseases-conditions/covid-19/about-covid-19/translated-content?utm_campaign=20200327_GCPE_AM_COVID_1_LEARN_FBIG_BCGOV_PU_BC__STATIC')
           p COVID FAQ in Punjabi
       h2 Manitoba
-      div(class='provincialResources')
+      div(class='resourceSection')
         a(href='https://www.manitoba.ca/asset_library/en/covid/restoring_faith_based_gatherings.pdf')
           p Manitoba places of worship guidelines
         a(href='https://wrha.mb.ca/public-health/')
@@ -74,7 +82,7 @@ block content
         a(href='https://www.gov.mb.ca/health/publichealth/index.html')
           p Manitoba Health Resources
       h2 New Brunswick
-      div(class='provincialResources')
+      div(class='resourceSection')
         a(href='https://www2.gnb.ca/content/dam/gnb/Departments/h-s/pdf/faq_religious_services-e.pdf')
           p New Brunswick places of worship guidelines
         a(href='https://www.moncton.ca/covid-19')
@@ -88,7 +96,7 @@ block content
         a(href='https://www2.gnb.ca/content/gnb/en/departments/health.html')
           p New Brunswick Health Resources
       h2 Newfoundland and Labrador
-      div(class='provincialResources')
+      div(class='resourceSection')
         a(href='https://www.gov.nl.ca/covid-19/information-sheets-for-businesses-and-workplaces/faith-based-organizations/')
           p Newfoundland and Labrador places of worship guidelines
         a(href='https://en.horizonnb.ca/facilities-and-services/facilities/saint-john-public-health.aspx')
@@ -102,7 +110,7 @@ block content
         a(href='https://www.gov.nl.ca/hcs/')
           p Newfoundland and Labrador Health Resources
       h2 Northwest Territories
-      div(class='provincialResources')
+      div(class='resourceSection')
         a(href='https://www.gov.nt.ca/covid-19/en/services/reopening-nwt-phases')
           p Northwest Territories places of worship guidelines
         a(href='https://www.nthssa.ca/en/public-health-services-yellowknife-region')
@@ -116,109 +124,176 @@ block content
         a(href='https://www.hss.gov.nt.ca/en/resources')
           p Northwest Territories Health Resources
       h2 Nova Scotia
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://novascotia.ca/coronavirus/restrictions-and-guidance/#gatherings')
+          p Nova Scotia places of worship guidelines
+        a(href='https://www.halifax.ca/fire-police/fire/emergency-management/corona-virus-disease-covid-19')
+          p Halifax COVID-19 page
+        a(href='https://novascotia.ca/coronavirus/')
+          p Nova Scotia COVID-19 page
+        a(href='https://novascotia.ca/coronavirus/reopening/')
+          p Nova Scotia's reopening framework
+        a(href='https://www.nshealth.ca/coronavirus')
+          p NS Health Authority's COVID-19 page
+        a(href='https://novascotia.ca/dhw/')
+          p Nova Scotia Health Resources
       h2 Nunavut
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://www.gov.nu.ca/sites/default/files/guidance_for_places_of_worship_-_eng.pdf')
+          p Nunavut places of worship guidelines
+        a(href='https://www.gov.nu.ca/department-health-iqaluit')
+          p Iqaluit Department of Health
+        a(href='https://www.gov.nu.ca/health/information/covid-19-novel-coronavirus')
+          p Nunavut COVID-19 page
+        a(href='https://www.gov.nu.ca/health/information/nunavuts-path')
+          p Nunavut's reopening framework
+        a(href='https://www.gov.nu.ca/health/news/covid-19-department-health-services-update')
+          p Nunavut Department of Health Services COVID-19 page
+        a(href='https://www.gov.nu.ca/health/information/health-services')
+          p Nunavut Health Resources
       h2 Ontario
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://ckphu.com/wp-content/uploads/2020/06/Advice-Religious-Services-Rites-and-Ceremonies-June-15-2020-Final.pdf')
+          p Ontario places of worship guidelines
+        a(href='https://www.toronto.ca/home/covid-19/')
+          p Toronto Public health COVID-19 page
+        a(href='https://www.ontario.ca/page/how-ontario-is-responding-covid-19')
+          p Ontario COVID-19 page
+        a(href='https://www.ontario.ca/page/reopening-ontario')
+          p Ontario's reopening framework
+        a(href='https://www.publichealthontario.ca/en/diseases-and-conditions/infectious-diseases/respiratory-diseases/novel-coronavirus')
+          p Public Health Ontario COVID-19 page
+        a(href='http://www.health.gov.on.ca/en/')
+          p Ontario Health Resources
       h2 Prince Edward Island
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://www.princeedwardisland.ca/en/information/health-and-wellness/worship-services-guidance')
+          p Prince Edward Island places of worship guidelines
+        a(href='https://www.charlottetown.ca/emergency_notification/covid-19')
+          p Charlottetown COVID-19 page
+        a(href='https://www.princeedwardisland.ca/en/covid19')
+          p Prince Edward Island COVID-19 page
+        a(href='https://www.princeedwardisland.ca/en/information/health-and-wellness/renew-pei-together-chart-phases')
+          p Prince Edward Island's reopening framework
+        a(href='https://www.princeedwardisland.ca/en/information/health-and-wellness/phased-approach')
+          p Department of Health and Wellness Prince Edward Island COVID-19 page
+        a(href='https://www.princeedwardisland.ca/en/topic/health-pei')
+          p Prince Edward Island Health Resources
       h2 Quebec
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/gatherings-events-covid19/')
+          p Quebec places of worship guidelines
+        a(href='https://santemontreal.qc.ca/en/public/')
+          p Sante Montreal
+        a(href='https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/')
+          p Quebec COVID-19 page
+        a(href='https://www.quebec.ca/en/health/health-issues/a-z/2019-coronavirus/gradual-resumption-activities-covid19-related-pause/')
+          p Quebec's reopening framework
+        a(href='https://www.inspq.qc.ca/covid-19')
+          p INSPQ COVID-19 page
+        a(href='https://www.quebec.ca/en/health/')
+          p Quebec Health Resources
       h2 Saskatchewan
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/re-open-saskatchewan-plan/guidelines/places-of-worship-guidelines')
+          p Saskatchewan places of worship guidelines
+        a(href='https://www.saskatoonhealthregion.ca/publichealth')
+          p Saskatoon Health Region - Saskatchewan Health Authority
+        a(href='https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus')
+          p Saskatchewan COVID-19 page
+        a(href='https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/re-open-saskatchewan-plan')
+          p Saskatchewan reopening framework
+        a(href='https://www.saskhealthauthority.ca/')
+          p Saskatchewan Health Authority's COVID-19 page
+        a(href='https://www.saskatchewan.ca/residents/health')
+          p Saskatchewan Health Resources
       h2 Yukon
-      div(class='provincialResources')
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
-        a(href='')
-          p 
+      div(class='resourceSection')
+        a(href='https://yukon.ca/en/health-and-wellness/covid-19/faith-based-services-guidelines-covid-19')
+          p Yukon places of worship guidelines
+        a(href='https://yukon.ca/en/places/whitehorse-health-centre')
+          p Whitehorse Health Center - Yukon Health and Social Services
+        a(href='https://yukon.ca/en/covid-19-information')
+          p Yukon COVID-19 page
+        a(href='https://yukon.ca/en/health-and-wellness/covid-19-information/summary-yukons-plan-lifting-covid-19-restrictions')
+          p Yukon reopening framework
+        a(href='https://hss.yukon.ca/')
+          p Department of Health and Social Services Yukon COVID-19 page
+        a(href='https://yukon.ca/en/department-health-social-services')
+          p Yukon Health Resources
     div(class='mentalHealth' id='mHealth')
       h1 Mental Health
+      h3 Mental health programming  via telephone hotline support, webinars and social media posts.
+      h2 Canadian
+      div(class='resourceSection')
+        a(href='https://www.camh.ca/en/health-info/mental-health-and-covid-19')
+          p Mental Health and the COVID-19 Pandemic - CAMH
+        a(href='https://www.mentalhealthcommission.ca/English/covid19')
+          p Resource Hub - Mental Health Commission of Canada
+        a(href='https://cmha.ca/news/covid-19-and-mental-health')
+          p COVID-19 and mental health - CMHA
+        a(href='http://www.health.gov.on.ca/en/pro/programs/publichealth/coronavirus/docs/resources_ontarians_experiencing_mha.pdf')
+          p Mental Health and Addictions - Ontario MOH
+        a(href='https://www.kflaph.ca/en/healthy-living/mental-health-and-covid-19.aspx')
+          p Mental Health - KFLAPH
+        a(href='https://www.ementalhealth.ca/Toronto/Mental-Wellness-and-Resiliency-while-Coping-with-COVID/index.php?m=article&ID=62192')
+          p Mental Wellness and Resiliency - eMental Health
+        a(href='http://www.sikhfamilyhelpline.com/')
+          p Sikh Family Helpline
+      h2 International
+      div(class='resourceSection')
+        a(href='https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/managing-stress-anxiety.html')
+          p Coping with Stress - CDC
+        a(href='https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/mental-health-covid-19/art-20482731')
+          p COVID-19 and your mental health - Mayo Clinic
+        a(href='https://www.who.int/teams/mental-health-and-substance-use/covid-19')
+          p Mental Health and COVID-19 - WHO
+        a(href='https://wfmh.global/mental-health-and-covid-19/')
+          p Mental Health and COVID-19 - WFMH
     div(class='financialSupport' id='finSupport')
       h1 Financial Support
+      h3 Fundraising and distribution of financial assistance to individuals, institutions and centres that are facing significant financial difficulties.
+      h2 Government of Canada
+      div(class='resourceSection')
+        a(href='https://covid-benefits.alpha.canada.ca/en/start')
+          p Financial Help COVID-19 - Government of Canada
+        a(href='https://innovation.ised-isde.canada.ca/s/?language=en_CA')
+          p Business Support - Government of Canada
+        a(href='https://www.canada.ca/en/department-finance/economic-response-plan.html')
+          p COVID-19 Economic Response - Government of Canada
+        a(href='https://travel.gc.ca/assistance/emergency-info/financial-assistance/covid-19-financial-help')
+          p Financial help if you are outside of Canada - Government of Canada
+        a(href='https://www.canada.ca/en/revenue-agency/services/subsidy/emergency-wage-subsidy.html')
+          p Canada Emergency Wage Subsidy - Government of Canada
+        a(href='https://www.canada.ca/en/revenue-agency/services/benefits/apply-for-cerb-with-cra.html')
+          p Canada Emergency Response Benefit - Government of Canada
+        a(href='https://www.canada.ca/en/revenue-agency/services/benefits/emergency-student-benefit.html')
+          p Canada Emergency Student Benefit - Government of Canada
+        a(href='https://www.canada.ca/en/services/benefits/publicpensions/notice-covid-19/one-time-payment.html')
+          p One-time tax-free payment for seniors - Government of Canada
+      h2 Other
+      div(class='resourceSection')
+        a(href='https://gowlingwlg.com/en/insights-resources/guides/2020/covid-19-government-relief-programs-guide/')
+          p Guide to Federal and Provincial Relief Programs - Gowling WLG
+        a(href='https://www.futurpreneur.ca/en/press-media/covid-19-support-futurpreneur-to-cover-loan-payments-for-six-months-and-provide-top-up-loans/')
+          p COVID-19 - Futurpreneur Canada
     div(class='foodSupport' id='fooSupport')
-      h1 Food Support
+      h1 Food and Supplies Relief Network
+      h3 Pooling resources together in order to supply food, hygiene tools and relief packs to vulnerable and high risk groups that are affected by COVID-19 pandemic restrictions. 
+      h2 General
+      div(class='resourceSection')
+        a(href='https://www.unitedway.ca/campaign/national-covid-19-response/')
+          p National COVID-19 Response - United Way
+        a(href='https://www.cafdn.org/covid-19/#1504037799315-93efecd3-9d5c')
+          p Emergency COVID-19 Appeal - Children's Aid Foundation of Canada
+        a(href='https://www.foodbankscanada.ca/COVID-19.aspx')
+          p COVID-19 - Food Banks Canada
+        a(href='https://secondharvest.ca/community/coronavirus-protocol/')
+          p COVID-19 Second Harvest
+        a(href='https://cfccanada.ca/en/News-Events/Latest-News/Announcements/Our-response-to-Covid-19')
+          p Response to COVID-19 Community Food Centres Canada
+        a(href='https://www.breakfastclubcanada.org/covid-impacts/')
+          p COVID-19 Emergency Fund - Breakfast Club of Canada
     div(class='wpcForm' id='wConcern')
       h1 Worplace Concern Form
       p This information will be used to share with public health officials to help make your workplace safer. If you choose to leave your information, we will contact you to get more information.

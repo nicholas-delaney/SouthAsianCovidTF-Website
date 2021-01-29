@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(class='dResourcesBody')
+    if error 
+        p error
+    div(class='dResource')
+        a(href='/downloadable-resources/Bengali') Bengali
+        a(href='/downloadable-resources/Punjabi') Punjabi
+        a(href='/downloadable-resources/Gujarati') Gujarati
+        a(href='/downloadable-resources/English') English
+        a(href='/downloadable-resources/Tamil') Tamil
+        a(href='/downloadable-resources/Hindi') Hindi
+    h1 Downloadable Resources - #{language}
+    h3 Click on the 'Download' button below each resource to download it.
+    div(class='downloadableContent')
+        each path in resources
+            div(class='singleResource')
+                - var path = '../dResources/' + path;
+                img(src=path alt='Downloadable resource' width='300px' height='300px')
+                form(action='' method='post')
+                    button(class='dButton' name='file' value='/'+path) Download

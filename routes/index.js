@@ -2,7 +2,24 @@ const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const nodemailer = require('nodemailer');
+const path = require('path');
 const dotenv = require('dotenv').config();
+const dResources = {
+  english:  [ 
+              'e1.png', 'e2.png', 'e3.jpg', 'e4.jpg', 'e5.png', 'e6.pdf', 'e7.jpg', 'e8.png', 'e9.png', 'e10.png', 'e11.png',
+              'e12.png', 'e13.png', 'e14.jpg', 'e15.jpg', 'e16.png', 'e17.pdf', 'e18.pdf', 'e19.pdf', 'e20.png', 'e21.png',
+              'e22.png', 'e23.jpg', 'e24.jpg', 'e25.jpg', 'e26.jpg', 'e27.jpg', 'e28.png', 'e29.jpg', 'e30.pdf', 'e31.jpg',
+              'e32.jpg', 'e33.jpg', 'e34.jpg', 'e35.jpg', '36.pdf'
+            ],
+  bengali:  [ 'b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.pdf' ],
+  gujarati: [ 'g1.jpg', 'g2.png', 'g3.png', 'g4.jpg', 'g5.jpg'],
+  hindi:    [ 'h1.png', 'h2.png', 'h3.png', 'h4.pdf', 'h5.png', 'h6.png', 'h7.png', 'h8.png', 'h9.png', 'h10.jpg' ],
+  punjabi:  [ 
+              'p1.jpg', 'p2.png', 'p3.png', 'p4.png', 'p5.jpg', 'p6.jpg', 'p7.jpg', 'p8.jpg', 'p9.jpg', 'p10.jpg', 'p11.jpg',
+              'p12.pdf', 'p13.png', 'p14.pdf', 'p15.png', 'p16.jpg', 'p17.png', 'p18.jpg'
+            ],
+  tamil:    [ 't1.png', 't2.png', 't3.jpg', 't4.png', 't5.pdf', 't6.png', 't7.png', 't8.png', 't9.png', 't10.png', 't11.pdf', 't12.jpg' ]
+}
 
 /* GET contact page */
 router.get('/contact', function (req, res, next) {
@@ -80,8 +97,8 @@ router.post('/contact', [
   }
 ]);
 
-/* GET rescources page */
 router.get('/resources', function (req, res, next) {
+  console.log('/resources');
   res.render('resources', { title: 'Resources' });
 });
 
@@ -99,6 +116,7 @@ router.post('/resources', [
   body('contactOther').optional({ checkFalsy: true }).trim().isLength({ min: 1 }).escape(),
 
   async function (req, res, next) {
+    console.log('email');
     // Validate data
     const errors = validationResult(req);
     // Create message with sanitized data
@@ -156,6 +174,50 @@ router.post('/resources', [
     }
   }
 ]);
+
+/* GET downloadable-resources page */
+router.get('/downloadable-resources/:language', function (req, res, next) {
+  console.log('/resources/:language');
+  const language = req.params.language;
+  const cLanguage = language.toLowerCase();
+  let resource = [];
+  let error = null;
+  if (cLanguage === 'english') {
+    resource = dResources.english;
+  }
+  else if (cLanguage === 'bengali') {
+    resource = dResources.bengali;
+  }
+  else if (cLanguage === 'gujarati') {
+    resource = dResources.gujarati;
+  }
+  else if (cLanguage === 'hindi') {
+    resource = dResources.hindi;
+  }
+  else if (cLanguage === 'punjabi') {
+    resource = dResources.punjabi;
+  }
+  else if (cLanguage === 'tamil') {
+    resource = dResources.tamil;
+  }
+  else {
+    error = 'Resource not found.';
+    console.log('resource not found.');
+  }
+  res.render(
+    'downloadable-resources', { language: language, resources: resource, error: error }
+  );
+});
+
+router.post('/downloadable-resources/:language', function (req, res, next) {
+  res.setHeader('Content-type', 'text/html');
+  res.download(
+    path.join(__dirname, "../public/dResources" + req.body.file),
+    (err) => {
+      if (err) { res.render('downloadable-resources', {downloadError: err}); }
+    }
+  );
+});
 
 /* GET BC page */
 router.get('/bc', function (req, res, next) {
