@@ -23,7 +23,7 @@ const dResources = {
 
 /* GET contact page */
 router.get('/contact', function (req, res, next) {
-  res.render('contact', { title: 'Contact' });
+  res.render('contact', { title: 'Contact', page: 'contact' });
 });
 
 /* POST contact page
@@ -70,6 +70,7 @@ router.post('/contact', [
         relevantXP: req.body.relevantXP,
         other: req.body.other,
         errors: errors.array(),
+        page: 'contact'
       });
       return;
     }
@@ -92,14 +93,14 @@ router.post('/contact', [
         html: msg,
       });
       // Render success page
-      res.render(('contact'), { title: 'Contact', formSuccess: true });
+      res.render(('contact'), { title: 'Contact', page: 'contact', formSuccess: true });
     }
   }
 ]);
 
 router.get('/resources', function (req, res, next) {
   console.log('/resources');
-  res.render('resources', { title: 'Resources' });
+  res.render('resources', { title: 'Resources', page: 'resources' });
 });
 
 /* POST resources page
@@ -148,6 +149,7 @@ router.post('/resources', [
         contactEmail: req.body.contactEmail,
         contactOther: req.body.contactOther,
         errors: errors.array(),
+        page: 'resources'
       });
       return;
     }
@@ -170,7 +172,7 @@ router.post('/resources', [
         html: msg,
       });
       // Render success page
-      res.render(('resources'), { title: 'Resources', formSuccess: true });
+      res.render(('resources'), { title: 'Resources', page: 'resources', formSuccess: true });
     }
   }
 ]);
@@ -204,7 +206,7 @@ router.get('/downloadable-resources/:language', function (req, res, next) {
     console.log('resource not found.');
   }
   res.render(
-    'downloadable-resources', { language: language, resources: resource, error: error }
+    'downloadable-resources', { language: language, page: 'resources', resources: resource, error: error }
   );
 });
 
@@ -213,29 +215,29 @@ router.post('/downloadable-resources/:language', function (req, res, next) {
   res.download(
     path.join(__dirname, "../public/dResources" + req.body.file),
     (err) => {
-      if (err) { res.render('downloadable-resources', {downloadError: err}); }
+      if (err) { res.render('downloadable-resources', {downloadError: err, page: 'resourcess'}); }
     }
   );
 });
 
 /* GET BC page */
 router.get('/bc', function (req, res, next) {
-  res.render('bc', { title: 'Workplace Concerns' });
+  res.render('bc', { title: 'Workplace Concerns', page: 'bc' });
 });
 
 /* GET about page */
 router.get('/about', function (req, res, next) {
-  res.render('about', { title: 'About Us' });
+  res.render('about', { title: 'About Us', page: 'about' });
 });
 
 /* GET media page */
 router.get('/media', function (req, res, next) {
-  res.render('media', { title: 'Media' });
+  res.render('media', { title: 'Media', page: 'media' });
 });
 
 /* GET home page */
 router.get('/home', function (req, res, next) {
-  res.render('home', { title: 'South Asian Covid Task Force' });
+  res.render('home', { title: 'South Asian Covid Task Force', page: 'home' });
 });
 
 /* GET default (home) page. */

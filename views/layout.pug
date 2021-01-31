@@ -19,20 +19,18 @@ html(lang='en')
     nav
       ul(class='navbar-nav')
         li
-          a(href='/home') Home
+          a(href='/home' class={activeNav: page === 'home'}) Home
         li
-          a(href='/about') About
+          a(href='/about' class={activeNav: page === 'about'}) About
         li
-          a(href='/contact') Contact
+          a(href='/contact' class={activeNav: page === 'contact'}) Contact
         li
-          a(href='/media') Media
+          a(href='/media' class={activeNav: page === 'media'}) Media
         li
-          a(href='/resources') Resources
+          a(href='/resources' class={activeNav: page === 'resources'}) Resources
     label(for='nav-toggle' class='nav-toggle-label')
       i(class='fa fa-bars')
   body
-    div(class='logoContainer')
-      div(class='mainLogo')
     block content
   footer 
     div(class='footer')
