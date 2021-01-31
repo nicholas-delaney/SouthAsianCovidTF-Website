@@ -177,7 +177,6 @@ router.post('/resources', [
 
 /* GET downloadable-resources page */
 router.get('/downloadable-resources/:language', function (req, res, next) {
-  console.log('/resources/:language');
   const language = req.params.language;
   const cLanguage = language.toLowerCase();
   let resource = [];

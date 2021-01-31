@@ -4,15 +4,15 @@ block content
   div(class='dResourcesBody')
     if error 
         p error
-    div(class='dResource')
-        a(href='/downloadable-resources/Bengali') Bengali
-        a(href='/downloadable-resources/Punjabi') Punjabi
-        a(href='/downloadable-resources/Gujarati') Gujarati
-        a(href='/downloadable-resources/English') English
-        a(href='/downloadable-resources/Tamil') Tamil
-        a(href='/downloadable-resources/Hindi') Hindi
     h1 Downloadable Resources - #{language}
     h3 Click on the 'Download' button below each resource to download it.
+    div(class='dResource')
+        a(href='/downloadable-resources/Bengali' class={active: language === 'Bengali'}) Bengali
+        a(href='/downloadable-resources/Punjabi' class={active: language === 'Punjabi'}) Punjabi
+        a(href='/downloadable-resources/Gujarati' class={active: language === 'Gujarati'}) Gujarati
+        a(href='/downloadable-resources/English' class={active: language === 'English'}) English
+        a(href='/downloadable-resources/Tamil' class={active: language === 'Tamil'}) Tamil
+        a(href='/downloadable-resources/Hindi' class={active: language === 'Hindi'}) Hindi
     div(class='downloadableContent')
         each path in resources
             div(class='singleResource')

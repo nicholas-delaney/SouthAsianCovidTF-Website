@@ -217,15 +217,15 @@ body {
 
 .resourceSection a {
   text-decoration: none;
-  color: var(--niceWhite);
+  color: black;
   margin: 1% 0;
   padding: 0;
   width: 100%;
 }
 
 .resourceSection p {
-  background: var(--softRed);
-  border: 1px solid black;
+  background-color: #ddd;
+  border: 1px solid var(--softRed);
   border-radius: 7px;
   padding: 1%;
   margin: 0;
@@ -290,24 +290,36 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;  
+  margin-top: 2%;
 }
 
 .dResource a {
   text-decoration: none;
-  background-color: #DDD;
-  flex: 0 1 12%;
-  padding: 7px;
-  margin: 2% 5px;
+  background-color: #eee;
+  flex: 0 1 9%;
+  padding: 2px 12px;
+  margin: -1px 0px 10px -1px;
   text-align: center;
-  color: black;
-  border: 1px solid var(--softRed);
-  font-size: 20px;
-  font-weight: 1000;
+  color: #333;
+  border: 1px solid #333;
+  font-size: 15px;
+  box-shadow: 1px 1px 1px #aaaaaa;
 }
 
 .dResource a:hover {
   color: var(--softRed);
 
+}
+
+.active {
+  border: 1px solid var(--softRed) !important;
+  color: #111 !important;
+  font-weight: 510;
+  z-index: 2;
+}
+
+.mainResourceLinks a {
+  flex: 1 1 13%;
 }
 
 /* Downloadable-resources styles */
@@ -318,8 +330,14 @@ body {
   margin: 1% 1%;
 }
 
-.dResourcesBody h3 {
+.dResourcesBody h1 {
   color: black;
+}
+
+.dResourcesBody h3 {
+  color: var(--softRed);
+  margin: 0;
+  padding-left: 1%;
 }
 
 .downloadableContent {
@@ -399,7 +417,7 @@ body {
   border: 1px solid var(--softRed);
   background-color: #DDD;
   border-radius: 7px;
-  padding: 3%;
+  padding: 0 2%;
   margin-bottom: 5%;
 }
 
@@ -412,6 +430,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  padding-left: 3%;
 }
 
 .formStyle input,
@@ -548,6 +567,7 @@ nav {
   width: 100%;
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  z-index: 99;
 }
 
 nav ul {
@@ -629,6 +649,7 @@ nav a:hover {
   .welcomeMsg {
     flex: 1 1 70%;
     padding: 0 5% 0 5%;
+    margin: 0 11%;
   }
 
   .welcomMsg h1 {
@@ -679,6 +700,7 @@ nav a:hover {
     padding: 0;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
   }
 
   nav a {
@@ -720,6 +742,10 @@ nav a:hover {
   .aboutContent {
     padding-top: 0;
     margin: 0 10% 2% 10%;
+  }
+
+  .aboutMsg {
+    margin: 0 10%;
   }
 
   /* Contact Style */
@@ -787,15 +813,13 @@ nav a:hover {
     left: 1px;
     width: 200px;
     height: auto;
-    background-color: #CCC;
+    background-color: var(--navBackground);
     border: 1px solid var(--softRed);
-    border-radius: 7px;
   }
 
   .resourcesNav ul {
-    padding: 0;
     width: 100%;
-    padding: 3%;
+    padding: 0 3%;
     margin: 0;
   }
 
@@ -807,23 +831,19 @@ nav a:hover {
     border-top: 1px solid var(--softRed);
   }
 
-  .lastLi {
-    border-bottom: 1px solid var(--softRed);
-  }
-
   .resourcesNav a {
     text-decoration: none;
     width: 100%;
-    color: black;
+    color: white;
 
   }
 
   .resourcesNav li:hover {
-    background-color: white;
+    color: var(--softRed);
   }
 
   .resources {
-    margin: 5% 210px;
+    margin: 5% 10% 5% 220px;
   }
 
   .resourceSection {
@@ -836,12 +856,13 @@ nav a:hover {
   }
 
   .resourceSection p:hover {
-    background-color: black;
+    color: var(--softRed);
+    box-shadow: 5px 5px 5px #aaaaaa;
   }
 
   /* Downloadable-resources style */
   .singleResource {
-    margin: 2% 2%;
+    margin: 1%;
     flex: 0 0 27%;
     justify-content: center;
     align-items: center;
@@ -850,6 +871,18 @@ nav a:hover {
   .downloadableContent {
     flex-flow: row wrap;
     align-items: flex-end;
+  }
+
+  .dResource {
+    padding: 0;
+  }
+
+  .dResourcesBody h1 {
+    margin-left: 6%;
+  }
+  
+  .dResourcesBody h3 {
+    margin-left: 5%;
   }
 
 }
