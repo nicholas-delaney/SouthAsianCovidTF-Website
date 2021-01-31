@@ -6,10 +6,10 @@ const path = require('path');
 const dotenv = require('dotenv').config();
 const dResources = {
   english:  [ 
-              'e1.png', 'e2.png', 'e3.jpg', 'e4.jpg', 'e5.png', 'e6.pdf', 'e7.jpg', 'e8.png', 'e9.png', 'e10.png', 'e11.png',
+              'e1.png', 'e2.png', 'e3.jpg', 'e4.jpg', 'e5.png', 'e6.pdf', 'e7.jpeg', 'e8.png', 'e9.png', 'e10.png', 'e11.png',
               'e12.png', 'e13.png', 'e14.jpg', 'e15.jpg', 'e16.png', 'e17.pdf', 'e18.pdf', 'e19.pdf', 'e20.png', 'e21.png',
               'e22.png', 'e23.jpg', 'e24.jpg', 'e25.jpg', 'e26.jpg', 'e27.jpg', 'e28.png', 'e29.jpg', 'e30.pdf', 'e31.jpg',
-              'e32.jpg', 'e33.jpg', 'e34.jpg', 'e35.jpg', '36.pdf'
+              'e32.jpg', 'e33.jpg', 'e34.jpg', 'e35.jpg', 'e36.pdf'
             ],
   bengali:  [ 'b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.pdf' ],
   gujarati: [ 'g1.jpg', 'g2.png', 'g3.png', 'g4.jpg', 'g5.jpg'],
