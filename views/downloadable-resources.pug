@@ -16,7 +16,6 @@ block content
     div(class='downloadableContent')
         each path in resources
             div(class='singleResource')
-                - var path = '../dResources/' + path;
-                img(src=path alt='Downloadable resource' width='300px' height='300px')
+                img(src='../dResources/'+path alt='Downloadable resource' width='300px' height='300px')
                 form(action='' method='post')
-                    button(class='dButton' name='file' value='/'+path) Download
+                    button(class='dButton' name='file' value=path) Download

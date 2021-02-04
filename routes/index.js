@@ -4,22 +4,10 @@ const { body, validationResult } = require("express-validator");
 const nodemailer = require('nodemailer');
 const path = require('path');
 const dotenv = require('dotenv').config();
-const dResources = {
-  english:  [ 
-              'e1.png', 'e2.png', 'e3.jpg', 'e4.jpg', 'e5.png', 'e6.pdf', 'e7.jpeg', 'e8.png', 'e9.png', 'e10.png', 'e11.png',
-              'e12.png', 'e13.png', 'e14.jpg', 'e15.jpg', 'e16.png', 'e17.pdf', 'e18.pdf', 'e19.pdf', 'e20.png', 'e21.png',
-              'e22.png', 'e23.jpg', 'e24.jpg', 'e25.jpg', 'e26.jpg', 'e27.jpg', 'e28.png', 'e29.jpg', 'e30.pdf', 'e31.jpg',
-              'e32.jpg', 'e33.jpg', 'e34.jpg', 'e35.jpg', 'e36.pdf'
-            ],
-  bengali:  [ 'b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.pdf' ],
-  gujarati: [ 'g1.jpg', 'g2.png', 'g3.png', 'g4.jpg', 'g5.jpg'],
-  hindi:    [ 'h1.png', 'h2.png', 'h3.png', 'h4.pdf', 'h5.png', 'h6.png', 'h7.png', 'h8.png', 'h9.png', 'h10.jpg' ],
-  punjabi:  [ 
-              'p1.jpg', 'p2.png', 'p3.png', 'p4.png', 'p5.jpg', 'p6.jpg', 'p7.jpg', 'p8.jpg', 'p9.jpg', 'p10.jpg', 'p11.jpg',
-              'p12.pdf', 'p13.png', 'p14.pdf', 'p15.png', 'p16.jpg', 'p17.png', 'p18.jpg'
-            ],
-  tamil:    [ 't1.png', 't2.png', 't3.jpg', 't4.png', 't5.pdf', 't6.png', 't7.png', 't8.png', 't9.png', 't10.png', 't11.pdf', 't12.jpg' ]
-}
+let dResources = require('../data/dResources.js');
+dResources = dResources.dResources;
+let pressReleases = require('../data/pressReleases.js');
+pressReleases = pressReleases.pressReleases;
 
 /* GET contact page */
 router.get('/contact', function (req, res, next) {
@@ -211,11 +199,20 @@ router.get('/downloadable-resources/:language', function (req, res, next) {
 });
 
 router.post('/downloadable-resources/:language', function (req, res, next) {
+  // check for .pdf file
+  let src = (req.body.file).toString();
+  if ( src.slice(0,1) === 'i') {
+    src = src.slice(1, src.length-3);
+    src = src.concat('pdf');
+    console.log(src);
+  }
+
+  // Send client downloadable file
   res.setHeader('Content-type', 'text/html');
   res.download(
-    path.join(__dirname, "../public/dResources" + req.body.file),
+    path.join(__dirname, "../public/dResources/" + src),
     (err) => {
-      if (err) { res.render('downloadable-resources', {downloadError: err, page: 'resourcess'}); }
+      if (err) { res.render('downloadable-resources', {downloadError: err, page: 'resources'}); }
     }
   );
 });
@@ -232,7 +229,26 @@ router.get('/about', function (req, res, next) {
 
 /* GET media page */
 router.get('/media', function (req, res, next) {
-  res.render('media', { title: 'Media', page: 'media' });
+  res.render('media', { pressReleases: pressReleases, page: 'media' });
+});
+
+/* POST media page
+   Download chosen press release
+*/
+router.post('/media', function(req, res, next) {
+  // Send client downloadable file
+  res.setHeader('Content-type', 'text/html');
+  res.download(
+    path.join(__dirname, "../public/dResources/" + req.body.src),
+    (err) => {
+      if (err) { console.log('errrr'); }
+    }
+  );
+});
+
+router.get('/pressReleases/:pr', function (req, res, next) {
+  console.log(req.params.pr);
+  res.render('pressRelease', { page: 'media', pr: req.params.pr });
 });
 
 /* GET home page */

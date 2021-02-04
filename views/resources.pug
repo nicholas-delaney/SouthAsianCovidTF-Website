@@ -80,11 +80,12 @@ block content
         a(href='https://sharedhealthmb.ca/covid19/')
           p Shared Health's COVID-19 page
         a(href='https://www.gov.mb.ca/health/publichealth/index.html')
-          p Manitoba Health Resources
+          p Manitoba Public Health
       h2 New Brunswick
       div(class='resourceSection')
-        a(href='https://www2.gnb.ca/content/dam/gnb/Departments/h-s/pdf/faq_religious_services-e.pdf')
-          p New Brunswick places of worship guidelines
+        - // Link broken
+        -//a(href='https://www2.gnb.ca/content/dam/gnb/Departments/h-s/pdf/faq_religious_services-e.pdf')
+        -// p New Brunswick places of worship guidelines
         a(href='https://www.moncton.ca/covid-19')
           p Moncton COVID-19 page
         a(href='https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19.html')
@@ -111,7 +112,7 @@ block content
           p Newfoundland and Labrador Health Resources
       h2 Northwest Territories
       div(class='resourceSection')
-        a(href='https://www.gov.nt.ca/covid-19/en/services/reopening-nwt-phases')
+        a(href='https://www.gov.nt.ca/covid-19/en/services/health-and-well-being/advice-gatherings-and-events')
           p Northwest Territories places of worship guidelines
         a(href='https://www.nthssa.ca/en/public-health-services-yellowknife-region')
           p Yellowknife Public Health - Health and Social Services
@@ -125,7 +126,7 @@ block content
           p Northwest Territories Health Resources
       h2 Nova Scotia
       div(class='resourceSection')
-        a(href='https://novascotia.ca/coronavirus/restrictions-and-guidance/#gatherings')
+        a(href='https://novascotia.ca/coronavirus/restrictions-and-guidance/#religiousservices')
           p Nova Scotia places of worship guidelines
         a(href='https://www.halifax.ca/fire-police/fire/emergency-management/corona-virus-disease-covid-19')
           p Halifax COVID-19 page
@@ -174,8 +175,8 @@ block content
         a(href='https://www.princeedwardisland.ca/en/covid19')
           p Prince Edward Island COVID-19 page
         a(href='https://www.princeedwardisland.ca/en/information/health-and-wellness/renew-pei-together-chart-phases')
-          p Prince Edward Island's reopening framework
-        a(href='https://www.princeedwardisland.ca/en/information/health-and-wellness/phased-approach')
+          p COVID Alert Level System
+        a(href='https://www.princeedwardisland.ca/en/information/health-and-wellness/covid-19-alert-level-system-pei-0')
           p Department of Health and Wellness Prince Edward Island COVID-19 page
         a(href='https://www.princeedwardisland.ca/en/topic/health-pei')
           p Prince Edward Island Health Resources
@@ -271,6 +272,8 @@ block content
           p Canada Emergency Student Benefit - Government of Canada
         a(href='https://www.canada.ca/en/services/benefits/publicpensions/notice-covid-19/one-time-payment.html')
           p One-time tax-free payment for seniors - Government of Canada
+        a(href='https://www.canada.ca/en/revenue-agency/services/benefits/recovery-sickness-benefit.html')
+          p Canada Recovery and Sick Benefit – Government of Canada
       h2 Other
       div(class='resourceSection')
         a(href='https://gowlingwlg.com/en/insights-resources/guides/2020/covid-19-government-relief-programs-guide/')
@@ -295,7 +298,7 @@ block content
         a(href='https://www.breakfastclubcanada.org/covid-impacts/')
           p COVID-19 Emergency Fund - Breakfast Club of Canada
     div(class='wpcForm' id='wConcern')
-      h1 Worplace Concern Form
+      h1(id='wpcHeader') Worplace Concern Form
       p This information will be used to share with public health officials to help make your workplace safer. If you choose to leave your information, we will contact you to get more information.
       p Required fields are labelled with "Required"
       if errors

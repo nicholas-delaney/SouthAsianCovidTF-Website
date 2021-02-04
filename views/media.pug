@@ -1,4 +1,18 @@
 extends layout
 
 block content
-  h1=title
+  div(class='media')
+    div(class='newsroom')
+      h1 Press Releases
+      div(class='pressReleases')
+        each pr in pressReleases
+          - var path = '../dResources/' + pr.path; 
+          div(class='singlePressRelease')
+            div(class='pRText')
+              h2=pr.title
+              h3=pr.subtitle
+              p=pr.date
+            div(class='pRButtons')
+              a(href='/pressReleases/' + pr.link class='pButtonStyle') Read more
+              form(action='' method='post')
+                button(class='pButtonStyle' name='src' value=pr.link) Download
